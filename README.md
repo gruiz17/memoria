@@ -1,12 +1,8 @@
-# best-site-ever
+# memoria
 
-In which I experiment with ClojureScript.
+A memory game. I wrote it mainly to practice ClojureScript.
 
-Basically a dev-mode template. Will expand more as I get better with this language.
-
-## Usage
-
-FIXME
+Audio from [University of Iowa Musical Instrument Samples](http://theremin.music.uiowa.edu/MIS.html).
 
 ## License
 
