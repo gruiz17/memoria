@@ -2,22 +2,26 @@
 <html>
 <head>
 	<meta charset="utf-8">
+        <title>memoria</title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
 	<div id="header">
-		<div id="title">memory thing</div>
+		<div id="title">memoria</div>
 		<div id="scoreboard">score: <span id="score">0</span></div>
 	</div>
 	<div id="gamearea">
-		<div id="sequence"></div>
-		<div id="player">soon</div>
+		<div id="sequence">loading game...</div>
+		<div id="player"></div>
 	</div>
         
         <script src="out/goog/base.js"></script>
 	<script type="text/javascript" src="main.js"></script>
         <script>goog.require('best_site_ever.main.board')</script>
-	<script>goog.require('best_site_ever.main.core')</script>
+        <script>goog.require('best_site_ever.main.mouse')</script>
+        <script>goog.require('best_site_ever.main.keyboard')</script>
+        <script>goog.require('best_site_ever.main.state')</script>
+        <script>goog.require('best_site_ever.main.core')</script>
 	<script>goog.require('best_site_ever.figwheel.main_figwheel')</script>
 </body>
 </html>

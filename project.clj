@@ -18,7 +18,7 @@
   
   :cljsbuild {:builds
               [{:id "dev"
-               	:source-paths ["src/best-site-ever/main" "src/best-site-ever/figwheel"]
+               	:source-paths ["src/best_site_ever/main" "src/best_site_ever/figwheel"]
                 :compiler {:output-to "resources/public/main.js"
                            :output-dir "resources/public/out"
                            :optimizations :none
