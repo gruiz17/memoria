@@ -5,7 +5,7 @@ html, body {
 
 body {
 	font-family: "Lucida Console", Monaco, monospace;
-	font-size: 50px;
+	font-size: 26px;
 	width: 100%;
 	height: 100%;
 	color: #fff;
@@ -21,7 +21,20 @@ body {
     height: 95%;
 }
 
-#title, #scoreboard, #sequence, #player {
+#title, #top-message, #scoreboard {
+    width: 33%;
+    height: 100%;
+}
+
+#title, #top-message {
+    float: left;
+}
+
+#scoreboard {
+    float: right;
+}
+
+#sequence, #player {
 	width: 50%;
 	height: 100%;
 	float: left;
