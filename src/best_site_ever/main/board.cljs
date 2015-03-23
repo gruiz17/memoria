@@ -18,8 +18,8 @@
       (.log js/console board)
       (set! (.-innerHTML div-to-change) board))))
 
-(defn- init-boards []
+(defn init-boards []
   (do  
     (generate-board! 4 "sequence")
     (generate-board! 4 "player")
-    (.log js/console "lol")))
+    (.log js/console "loaded!")))

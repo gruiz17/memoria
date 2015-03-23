@@ -11,5 +11,7 @@
 
 (.log js/console "hello world")
 
-(board/init-boards)
+(do  (board/init-boards)
+     (mouse/init-events))
+
 
