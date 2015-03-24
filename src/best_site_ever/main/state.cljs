@@ -1,9 +1,10 @@
-(ns best-site-ever.main.state)
+(ns best-site-ever.main.state
+  (:require [clojure.string :as string]))
 
-(def game-stage (atom nil)) ;; "to-begin", "in-progress", "lost"
-(def whose-turn (atom nil)) ;; "player", "simon"
+(def game-stage (atom "to-begin")) ;; "to-begin", "in-progress", "lost"
+(def whose-turn (atom "simon")) ;; "player", "simon"
 (def current-sequence (atom [])) ;; current sequence lol
-(def next-index-to-press (atom nil)) ;; initialized to 0
+(def next-index-to-press (atom 0)) ;; initialized to 0
 
 ;; state getters
 (defn get-game-stage [] (deref game-stage))
@@ -19,7 +20,7 @@
   (swap! next-index-to-press inc))
 
 (defn change-game-state [state]
-  (swap! game-stage (fn [] state)))
+  (swap! game-stage #(string/replace % #"[a-z\-]+" state)))
 
 ;; funcs dependent on the state
 (defn move-on? [val]

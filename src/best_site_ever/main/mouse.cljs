@@ -16,7 +16,8 @@
   (doseq [el (array-seq (.getElementsByClassName js/document "player-button"))] 
     (.addEventListener el "mousedown" #(do 
                                            (.log js/console "mouse down, " (get-button-number el))
-                                           (aesthetics el 1)))
+                                           (aesthetics el 1)
+                                           (.log js/console (state/get-game-stage))))
     (.addEventListener el "mouseup" #(do 
                                        (.log js/console "mouse up, " (get-button-number el))
                                        (aesthetics el 0.5)))))
