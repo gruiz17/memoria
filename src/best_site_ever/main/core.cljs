@@ -8,7 +8,9 @@
 
 (.log js/console "hello world")
 
-(do  (board/init-boards)
-     (mouse/init-events))
+(do  (state/change-game-state "to-begin")  
+     (board/init-boards)
+     (mouse/init-events)
+     (keyboard/init-keyboard))
 
 

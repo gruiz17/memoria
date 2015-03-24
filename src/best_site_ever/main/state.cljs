@@ -5,7 +5,13 @@
 (def current-sequence (atom [])) ;; current sequence lol
 (def next-index-to-press (atom nil)) ;; initialized to 0
 
-;; all the actual state-changing funcs
+;; state getters
+(defn get-game-stage [] (deref game-stage))
+(defn get-whose-turn [] (deref whose-turn))
+(defn get-current-sequence [] (deref current-sequence))
+(defn get-next-index-to-press [] (deref next-index-to-press))
+
+;; state changers
 (defn add-to-current-sequence [val]
   (swap! current-sequence #(conj % val)))
 
