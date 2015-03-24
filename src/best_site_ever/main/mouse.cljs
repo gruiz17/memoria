@@ -1,5 +1,6 @@
 (ns best-site-ever.main.mouse
-  (:require [best-site-ever.main.state :as state]))
+  (:require [best-site-ever.main.state :as state]
+            [best-site-ever.main.board :as board]))
 
 (defn- get-button-number [el]
   (->> el
@@ -8,16 +9,12 @@
        (first)
        (int)))
 
-(defn- aesthetics [el amount]
-  (do
-    (set! (-> el (.-style) (.-opacity)) (str amount))))
-
 (defn init-events []
   (doseq [el (array-seq (.getElementsByClassName js/document "player-button"))] 
     (.addEventListener el "mousedown" #(do 
                                            (.log js/console "mouse down, " (get-button-number el))
-                                           (aesthetics el 1)
+                                           (board/flash el 1)
                                            (.log js/console (state/get-game-stage))))
     (.addEventListener el "mouseup" #(do 
                                        (.log js/console "mouse up, " (get-button-number el))
-                                       (aesthetics el 0.5)))))
+                                       (board/flash el 0.5)))))

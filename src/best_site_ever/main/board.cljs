@@ -23,3 +23,8 @@
     (generate-board! 4 "sequence")
     (generate-board! 4 "player")
     (.log js/console "loaded!")))
+
+
+(defn flash [el amount]
+  (set! (->> el (.-style) (.-opacity)) (str amount)))
+
