@@ -13,3 +13,4 @@ figwheel_server.log
 resources/public/out/
 resources/public/*.js
 *.js
+.lein-repl-history
