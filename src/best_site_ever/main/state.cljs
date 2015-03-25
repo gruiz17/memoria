@@ -22,6 +22,3 @@
 
 (defn change-game-state [state]
   (swap! game-stage #(string/replace % #"[a-z\-]+" state)))
-
-;; funcs dependent on the state
-;; probably need to put this in a logic.cljs file

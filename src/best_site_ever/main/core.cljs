@@ -13,5 +13,3 @@
     (board/init-boards)
     (mouse/init-events)
     (keyboard/init-keyboard))
-
-
