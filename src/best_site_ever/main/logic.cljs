@@ -29,7 +29,7 @@
         (.log js/console audiostr)
         (audio/play-audio audiostr))
       (board/flash (get-element-from-num (nth elem-seq curr) "sequence") 1)
-      (<! (timeout 500))
+      (<! (timeout 1000))
       (board/flash (get-element-from-num (nth elem-seq curr) "sequence") 0.5)
       (<! (timeout 200))
       (if (< (inc curr) (count elem-seq))

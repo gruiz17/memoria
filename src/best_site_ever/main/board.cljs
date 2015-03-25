@@ -10,9 +10,17 @@
 (defn- generate-board! [n div-name] 
   {:pre [(squares-amount-valid? n)
          (string? div-name)]}
-  (let [board (apply str (->> (range 1 (inc n))
-                              (map #(str "<div class='game-button " div-name  "-button' id='" (str div-name "-" %) "' style='background-color:" (nth colors (- % 1)) "'>lol</div>"))
-                              (apply str)))
+  (let [board (apply str 
+                (->> (range 1 (inc n))
+                  (map 
+                    #(str "<div class='game-button " 
+                          div-name  
+                          "-button' id='" 
+                          (str div-name "-" %) 
+                          "' style='background-color:" 
+                          (nth colors (- % 1)) 
+                          "'>lol</div>"))
+                          (apply str)))
         div-to-change (.getElementById js/document div-name)]
     (do
       (.log js/console board)
