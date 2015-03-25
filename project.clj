@@ -22,4 +22,12 @@
                            :output-dir "resources/public/out"
                            :optimizations :none
                            :source-maps true
-                           :pretty-print true}}]})
+                           :pretty-print true}}
+               
+               {:id "prod"
+                :source-paths ["src/best_site_ever/main"]
+                :compiler {:output-to "resources/public/main.js"
+                           :output-dir "resources/public/out-prod"
+                           :optimizations :advanced
+                           :pretty-print false}}
+               ]})
