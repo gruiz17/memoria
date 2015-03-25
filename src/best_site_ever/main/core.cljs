@@ -6,11 +6,10 @@
             [best-site-ever.main.state :as state]
             [cljs.core.async :refer [put! chan <!]]))
 
-(enable-console-print!)
+;; (enable-console-print!)
 
-(.log js/console "hello world")
-
-(do (state/change-game-state "to-begin")  
+(do (state/change-game-state "to-begin")
+  	(state/set-current-index-to-zero)  
     (board/init-boards)
     (mouse/init-events)
     (keyboard/init-keyboard))

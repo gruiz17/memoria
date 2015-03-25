@@ -6,15 +6,9 @@ Audio from [University of Iowa Musical Instrument Samples](http://theremin.music
 
 # Status
 
-## Done
-* Board initialization
-* Event Listening
-* Controls for the game/state for the game
-
 ## Todo
-* Basically all the game logic
-* Add sound to clicking buttons (do last)
-* Make gh-pages branch for publish
+* Finishing touches and random bugs I guess.
+* Make gh-pages branch for publish.
 
 
 ## License

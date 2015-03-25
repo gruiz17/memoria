@@ -19,18 +19,18 @@
                           (str div-name "-" %) 
                           "' style='background-color:" 
                           (nth colors (- % 1)) 
-                          "'>lol</div>"))
+                          "'></div>"))
                           (apply str)))
         div-to-change (.getElementById js/document div-name)]
     (do
-      (.log js/console board)
+      ;;(.log js/console board)
       (set! (.-innerHTML div-to-change) board))))
 
 (defn init-boards []
   (do  
     (generate-board! 4 "sequence")
-    (generate-board! 4 "player")
-    (.log js/console "loaded!")))
+    (generate-board! 4 "player")))
+;;  (.log js/console "loaded!")
 
 
 (defn flash [el amount]
