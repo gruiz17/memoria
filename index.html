@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <title>memoria</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<audio id="B4" src="audio/B4.wav" preload="auto"></audio>
+	<audio id="D4" src="audio/D4.wav" preload="auto"></audio>
+	<audio id="D5" src="audio/D5.wav" preload="auto"></audio>
+	<audio id="G4" src="audio/G4.wav" preload="auto"></audio>
+	<div id="header">
+		<div id="title">memoria.</div>
+                <div id="top-message">press space to start.</div>
+		<div id="scoreboard">score: <span id="score">0</span></div>
+	</div>
+	<div id="gamearea">
+		<div id="sequence">loading game...</div>
+		<div id="player"></div>
+	</div>
+        
+        <script src="out/goog/base.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+        <script>goog.require('best_site_ever.main.board')</script>
+        <script>goog.require('best_site_ever.main.mouse')</script>
+        <script>goog.require('best_site_ever.main.keyboard')</script>
+        <script>goog.require('best_site_ever.main.state')</script>
+        <script>//goog.require('best_site_ever.main.logic')</script>
+        <script>goog.require('best_site_ever.main.core')</script>
+	<script>goog.require('best_site_ever.figwheel.main_figwheel')</script>
+</body>
+</html>

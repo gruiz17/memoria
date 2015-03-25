@@ -1,0 +1,54 @@
+html, body {
+	margin: 0;
+        height: 100%;
+}
+
+body {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 26px;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background-color: #000;
+}
+#header {
+	width: 100%;
+	height: 5%;
+}
+
+#gamearea {
+    width: 100%;
+    height: 95%;
+}
+
+#title, #top-message, #scoreboard {
+    width: 33%;
+    height: 100%;
+}
+
+#title, #top-message {
+    float: left;
+}
+
+#scoreboard {
+    float: right;
+}
+
+#sequence, #player {
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+
+.game-button {
+    width: 50%;
+    height: 50%;
+    float: left;
+    opacity: 0.5;
+}
+
+/*#sequence, #player {
+	width: 50%;
+	height: 100%;
+	float: left;
+}*/
